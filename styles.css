@@ -1,10 +1,13 @@
+/* RESET INICIAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Remove rolagem lateral */
     font-family: 'Poppins', Arial, sans-serif;
     background-color: black;
     display: flex;
@@ -14,6 +17,7 @@ body {
     min-height: 100vh;
 }
 
+/* CONTAINER */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +25,7 @@ body {
     align-items: stretch;
 }
 
-/* Moldura com desvanecimento no lado esquerdo */
+/* DIV1 ESTILO */
 .div1 {
     background: linear-gradient(to right, #0a0a0a, rgba(0, 0, 0, 0.6) 50%, #0a0a0a 100%), 
                 #141514;
@@ -43,28 +47,35 @@ body {
 .div1 img {
     position: absolute;
     max-width: 100%;
-    max-height: 160%;
+    max-height: 100%;
     object-fit: contain;
-    transition: transform 1s ease;
-}
-
-.div1 img.maquinaverde {
-    z-index: 2;
-    
+    transition: transform 1s ease; /* Transição suave */
 }
 
 .div1 img.lucasfranca-img {
     z-index: 3;
-    height: 500%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    transition: transform 1s ease;
 }
 
 .div1 img.maquina {
     z-index: 4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease;
 }
 
-/* Alterado para incluir o degradê na div2 */
+/* DIV2 ESTILO */
 .div2 {
-    background: linear-gradient(to left, #0d0d0d, #0a0a0a); /* Degradê de grafite quase preto para grafite claro */
+    background: linear-gradient(to left, #0d0d0d, #0a0a0a);
     width: 50%;
     height: 75vh;
     display: flex;
@@ -74,46 +85,43 @@ body {
     padding: 20px 10px;
     text-align: center;
     z-index: 1;
-    max-width: 100%;
-    max-height: 160%;
+    overflow: auto; /* Permite rolagem caso necessário */
 }
 
 .div2 .main-title {
-    font-family: 'Montserrat', sans-serif; /* Nova fonte moderna */
-    font-size: 15em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(4em, 6vw, 14em);
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 25px;
     text-transform: uppercase;
 }
 
-
 .div2 .sub-title {
-    font-size: 5em;
+    font-size: clamp(1.8em, 4vw, 6em);
     font-weight: 400;
     color: #b3b3b3;
     margin-bottom: 40px;
 }
 
-/* Estilo de botões e links (compartilhado por button, .inst e .tik-tok) */
+/* BOTÕES */
 button, .inst, .tik-tok {
     width: 80%;
-    height: 240px;
-    margin: 20px auto;
+    height: 200px;
+    margin: 10px ;
     background: linear-gradient(to right, #2bc6c2, #ffffff); 
-    color: rgb(0, 0, 0);
+    color: black;
     border: none;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 4em;
+    font-size: clamp(1em, 2vw, 4.5em); /* Ajuste dinâmico */
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
+    gap: 10px;
+    padding: 5px;
     text-decoration: none;
 }
 
@@ -122,26 +130,14 @@ button:hover, .inst:hover, .tik-tok:hover {
     transform: scale(1.1);
 }
 
-button:active, .inst:active, .tik-tok:active {
-    background: linear-gradient(to right, #005555, #b5b5b5);
-    transform: scale(0.95);
-}
-
-button i, .inst i, .tik-tok i {
-    font-size: 1.5em;
-}
-
-/* Estilo do texto de avaliações */
+/* TEXTO DE AVALIAÇÃO */
 .review-text {
-    font-size: 6em;
+    font-size: clamp(2em, 3.5vw, 4em); /* Ajuste dinâmico */
     color: #ffffff;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    margin-top: 20px;
     text-align: center;
-    font-weight: 400;
 }
 
-/* Estilo das estrelas */
 .stars {
     display: flex;
     justify-content: center;
@@ -151,131 +147,160 @@ button i, .inst i, .tik-tok i {
 
 .stars i {
     color: #ffd700;
-    font-size: 6.5em;
+    font-size: clamp(2em, 3vw, 4.5em);
 }
 
-@media (max-width: 768px) {
-    .div2 {
-        width: 100%;
-        padding: 10px;
-    }
-    
-    /* Ajuste dos botões para mobile: redução de tamanho, fonte e padding */
-    button, .inst, .tik-tok {
-        width: 90%;
-        margin: 10px auto;
-        height: auto;
-        font-size: 1.1em;  /* Redução do tamanho da fonte */
-        padding: 10px 5px;  /* Menos preenchimento interno */
-    }
-    
-    .review-text {
-        font-size: 1.2em;
-        margin-top: 10px;
-        margin-bottom: 5px;
-    }
-    
-    .stars {
-        gap: 2px;
-    }
-    
-    .stars i {
-        font-size: 1.2em;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.div2 button:nth-child(3) {
-    animation: slideIn 1s ease-out 0.2s forwards;
-}
-
-.div2 button:nth-child(4) {
-    animation: slideIn 1s ease-out 0.4s forwards;
-}
-
-.div2 button:nth-child(5) {
-    animation: slideIn 1s ease-out 0.6s forwards;
-}
-
+/* DIV3 ESTILO */
 .div3 {
     background-color: #000000;
     width: 100%;
-    height: 30%;
+    min-height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 30px;
+    padding: 15px 10px;
     text-align: center;
 }
 
 .div3 img {
-    width: 450px;
+    width: 400px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-top: 50px;
 }
 
 .div3 p {
     color: #ffffff;
-    font-size: 4.5em;
+    font-size: clamp(2.5em, 2vw, 3.5em);
     font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    line-height: 1.5;
+    margin: 50px auto;
 }
 
-@media (max-width: 768px) {
+/* MEDIA QUERY PARA 768PX */
+@media (max-width: 666px) {
     .container {
         flex-direction: column;
+        width: 100%;
     }
-    
-    .div1 {
-        width: 120%;
-        height: 50vh;
+
+    .div1, .div2 {
+        width: 100%;
+        height: 48vh;
+        overflow: auto;
         padding: 10px;
-        border: 2px solid transparent;
-        border-image: linear-gradient(to right, #2bc6c2, rgba(43, 198, 194, 0));
-        border-image-slice: 1;
-        border-radius: 10px;
+        
     }
-    
-    .div1 img {
-        max-width: 110%;
-        padding-top: 5%;
-        height: auto;
+    button, .inst, .tik-tok {
+        font-size: clamp(1.3em, 2vw, 4.5em); /* Ajuste dinâmico */
     }
-    
-    .div2 .main-title {
-        font-size: 2em;
-        margin-bottom: 5px;
-    }
-    
     .div2 .sub-title {
-        font-size: 1.2em;
-        margin-bottom: 10px;
+        margin: 4px;
     }
-    
+    .div2 .main-title {
+        margin: 3px ;
+    }
+    .review-text{
+        font-size: clamp(1.5em, 2.5vw, 3em);
+
+    }
+   
     .div3 {
-        padding: 20px 10px;
         height: auto;
+        padding: 10px;
+        text-align: center;
     }
-    
     .div3 img {
         width: 100px;
-        margin-bottom: 10px;
+        height: auto;
+        margin-bottom:1px;
+        margin-top: 1px;
     }
-    
     .div3 p {
-        font-size: 1.2em;
-        line-height: 1.1;
+        color: #ffffff;
+        font-size: clamp(1em, 2vw, 3.5em);
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 10px auto;
+    }
+    .stars {
+        gap: 10px;
+    }
+
+    .div2 .main-title {
+        font-size: clamp(2em, 5vw, 4em);
+    }
+
+    .div2 .sub-title {
+        font-size: clamp(1em, 4vw, 2.5em);
     }
 }
+
+@media (max-width: 1024px) and (min-height: 300px) and (orientation: landscape) {
+    .container {
+        display: flex; /* Alinha as divs horizontalmente */
+         /* Garante que as divs fiquem na mesma linha */
+        justify-content: space-between; /* Espaçamento uniforme entre as divs */
+        align-items: flex-start; /* Alinha as divs ao topo */
+        width: 100%;
+    }
+
+    .div1 {
+        width: 50%; /* Cada div ocupa metade da largura */
+        height: 80vh; /* Ajusta a altura proporcional ao formato paisagem */
+        padding: 10px;
+        box-sizing: border-box; /* Inclui padding na largura e altura */
+        overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
+    }
+    .div2 {
+        width: 50%; /* Cada div ocupa metade da largura */
+        height: 80vh; /* Ajusta a altura proporcional ao formato paisagem */
+        padding: 10px;
+        box-sizing: border-box; /* Inclui padding na largura e altura */
+        overflow: visible; /* Evita que o conteúdo ultrapasse os limites */
+    }
+    .div2 .sub-title {
+        margin: 1px;
+        font-size: clamp(1em, 2vw, 3em);
+    font-weight: 200px;
+    }
+    .div2 .main-title {
+        margin: 1px ;
+        font-size: clamp(1em, 2vw, 3em);
+    font-weight: 200;
+    }
+    .review-text{
+        font-size: clamp(1em, 1vw, 3em);
+    }
+    .div3 {
+        width: 100%; /* O rodapé ocupa toda a largura */
+        height: 5%; /* Adapta a altura dinamicamente ao conteúdo */
+        padding: 10px 5px; /* Espaçamento interno no rodapé */
+        margin-bottom: none;
+        text-align: center; /* Centraliza o conteúdo do rodapé */
+        background-color: #141414; /* Fundo discreto para o rodapé */
+        display: flex;
+        flex-direction: row;
+
+        
+    }
+    .div3 img {
+        width: 100px;
+        height: auto;
+        margin-bottom:1px;
+        margin-top: 1px;
+        margin-left: 20%;
+    }
+    .div3 p {
+        color: #ffffff;
+        font-size: clamp(0.7em, 1vw, 1.5em);
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 10px auto;
+    }
+    .stars {
+        gap: 10px;
+       
+    }
+
+}
+
+    
