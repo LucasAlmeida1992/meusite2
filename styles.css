@@ -85,7 +85,7 @@ html, body {
     padding: 20px 10px;
     text-align: center;
     z-index: 1;
-    overflow: auto; /* Permite rolagem caso necessário */
+    overflow: visible; /* Permite rolagem caso necessário */
 }
 
 .div2 .main-title {
@@ -162,7 +162,8 @@ button:hover, .inst:hover, .tik-tok:hover {
     padding: 15px 10px;
     text-align: center;
     display: flex;
-flex-direction: row;
+    flex-direction: row;
+    
 }
 
 .div3 img {
@@ -212,12 +213,14 @@ flex-direction: row;
         height: auto;
         padding: 10px;
         text-align: center;
+        flex-direction: column
     }
     .div3 img {
         width: 100px;
         height: auto;
         margin-bottom:1px;
         margin-top: 1px;
+        margin-left: 0px;
     }
     .div3 p {
         color: #ffffff;
