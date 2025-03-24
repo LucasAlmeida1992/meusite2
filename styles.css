@@ -154,13 +154,15 @@ button:hover, .inst:hover, .tik-tok:hover {
 .div3 {
     background-color: #000000;
     width: 100%;
-    min-height: 10vh;
+    min-height: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px 10px;
     text-align: center;
+    display: flex;
+flex-direction: row;
 }
 
 .div3 img {
@@ -168,6 +170,7 @@ button:hover, .inst:hover, .tik-tok:hover {
     height: auto;
     margin-bottom: 5px;
     margin-top: 50px;
+    margin-left: 20%;
 }
 
 .div3 p {
