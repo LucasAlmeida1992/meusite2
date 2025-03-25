@@ -12,12 +12,31 @@
   <link rel="icon" type="image/x-icon" href="imagens/favicon.png">
   <!-- Importação de Font Awesome para ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Media query ajustada */
+    @media (min-height: 900px) and (max-width: 1280px) and (orientation: portrait) {
+        body {
+            background-color: #f0f0f0; /* Exemplo de alteração visual */
+        }
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .div1, .div2 {
+            width: 100%;
+            height: auto;
+        }
+        .div3 p {
+            font-size: 1em;
+        }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <!-- Seção de imagens principais -->
     <div class="div1">
-     
       <img src="imagens/Lucasfranca.webp" alt="Imagem Lucasfranca" class="lucasfranca-img">
       <img src="imagens/maquina.png" alt="Imagem Maquina" class="animate maquina">
     </div>
@@ -30,8 +49,7 @@
       <!-- Botão de Orçamento -->
       <button class="orc" id="btnOrcamento">
         <i class="fab fa-whatsapp"></i> WhatsApp
-    </button>
-    
+      </button>
       
       <!-- Botão de Instagram -->
       <a href="https://www.instagram.com/lucasfranca.tattoo/" target="_blank" class="inst">
@@ -66,6 +84,5 @@
 
   <!-- Caminho ajustado para o script -->
   <script src="script.js"></script>
-
 </body>
 </html>

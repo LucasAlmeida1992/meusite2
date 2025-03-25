@@ -359,13 +359,13 @@ button:hover, .inst:hover, .tik-tok:hover {
 
 
 /*---------------------------------------------------*/
-    @media (min-width: 768px) and (min-height: 900px)  {
+@media (min-height: 900px) and (orientation: portrait) {
     .container {
         display: flex; 
-        flex-direction: column;/* Alinha as divs horizontalmente */
-         /* Garante que as divs fiquem na mesma linha */
-         justify-content: center; /* Espaçamento uniforme entre as divs */
-         align-items: center; /* Alinha as divs ao topo */
+        flex-direction: row;/* Alinha as divs horizontalmente */
+        justify-content: space-between; /* Espaçamento uniforme entre as divs */
+        align-items: flex-start; /* Alinha as divs ao topo */
+        width: 100%;
          width: 100%;
         
      }
@@ -394,7 +394,7 @@ button:hover, .inst:hover, .tik-tok:hover {
      }
      .div2 .main-title {
          margin: auto ;
-         font-size: clamp(2em, 10vw, 20em);
+         font-size: clamp(0.2em, 5vw, 20em);
      font-weight: 200;
      }
      .review-text{
@@ -404,7 +404,7 @@ button:hover, .inst:hover, .tik-tok:hover {
      }
      button, .inst, .tik-tok {
         margin: 2% ;
-        font-size: clamp(0.4em, 5vw, 10.5em); /* Ajuste dinâmico */
+        font-size: clamp(2.4em, 5vw, 10.5em); /* Ajuste dinâmico */
          margin: clamp(0.1em, 1vw, 1.5em) ;
          width: clamp(5em, 75vw, 100em);
          height: clamp(5em, 20vw, 40em);
@@ -423,7 +423,89 @@ button:hover, .inst:hover, .tik-tok:hover {
      }
      
          .div3 img {
-             width: clamp(1em, 13vw, 20em);
+             width: clamp(3em, 13vw, 20em);
+             height: auto;
+            margin: auto;
+             display: flex;
+             flex-direction: row;
+     }
+     .div3 p {
+         color: #ffffff;
+         font-size: clamp(0.7em, 2vw, 4.5em);
+         font-family: 'Poppins', Arial, sans-serif;
+         margin: 10px auto;
+     }
+     .stars {
+         gap: 10px;
+        font-size: clamp(1em, 2vw, 5em);
+     }
+     
+ 
+ }
+ @media (min-height: 800px) and(max-height:1000)and (orientation: landscape) {
+    .container {
+        display: flex; 
+        flex-direction: row;/* Alinha as divs horizontalmente */
+        justify-content: space-between; /* Espaçamento uniforme entre as divs */
+        align-items: flex-start; /* Alinha as divs ao topo */
+        width: 100%;
+        
+     }
+ 
+     .div1 {
+         width: 50%; /* Cada div ocupa metade da largura */
+         height: 85vh; /* Ajusta a altura proporcional ao formato paisagem */
+         padding: 10px;
+         box-sizing: border-box; /* Inclui padding na largura e altura */
+         overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
+     }
+     .div2 {
+         width: 50%; /* Cada div ocupa metade da largura */
+         height: 85vh; /* Ajusta a altura proporcional ao formato paisagem */
+         padding: 10px;
+         box-sizing: border-box; /* Inclui padding na largura e altura */
+         overflow: auto; 
+         
+         /* Evita que o conteúdo ultrapasse os limites */
+     }
+     .div2 .sub-title {
+         margin: 2%;
+         
+         font-size: clamp(1em, 4vw, 7em);
+     font-weight: 200;
+     }
+     .div2 .main-title {
+         margin: auto ;
+         font-size: clamp(2em, 10vw, 20em);
+     font-weight: 200;
+     }
+     .review-text{
+        margin:2%;
+         font-size: clamp(1em, 3vw, 15em);
+         
+     }
+     button, .inst, .tik-tok {
+        margin: 2% ;
+        font-size: clamp(4.4em, 5vw, 10.5em); /* Ajuste dinâmico */
+         margin: clamp(0.1em, 1vw, 1.5em) ;
+         width: clamp(5em, 75vw, 100em);
+         height: clamp(5em, 20vw, 40em);
+     }
+     .div3 {
+         width: 100%; /* O rodapé ocupa toda a largura */
+         height: 5%; /* Adapta a altura dinamicamente ao conteúdo */
+         padding: 10px 5px; /* Espaçamento interno no rodapé */
+         margin-bottom: none;
+         text-align: center; /* Centraliza o conteúdo do rodapé */
+         background-color: #141414; /* Fundo discreto para o rodapé */
+         display: flex;
+         flex-direction: row;
+ 
+         
+     }
+     
+         .div3 img {
+             width: clamp(3em, 13vw, 20em);
              height: auto;
             margin: auto;
              display: flex;
