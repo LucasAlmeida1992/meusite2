@@ -7,7 +7,7 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Remove rolagem lateral */
+    
     font-family: 'Poppins', Arial, sans-serif;
     background-color: black;
     display: flex;
@@ -197,7 +197,7 @@ button:hover, .inst:hover, .tik-tok:hover {
 }
 
 /* MEDIA QUERY PARA 666PX */
-@media (max-width: 666px) {
+@media (max-height:915px) and (orientation: portrait) {
     .container {
         flex-direction: column;
         width: 100%;
@@ -273,7 +273,7 @@ button:hover, .inst:hover, .tik-tok:hover {
     }
 
 
-@media (max-width: 1024px) and (min-height: 300px) and (orientation: landscape) {
+@media (max-width: 1022px) and (min-height: 300px) and (orientation: landscape) {
     .container {
         display: flex; /* Alinha as divs horizontalmente */
          /* Garante que as divs fiquem na mesma linha */
@@ -358,8 +358,8 @@ button:hover, .inst:hover, .tik-tok:hover {
 
 
 
-/*---------------------------------------------------*/
-@media (min-height: 900px) and (orientation: portrait) {
+/*ipad---------------------------------------------------*/
+@media (min-height: 915px) and (orientation: portrait) {
     .container {
         display: flex; 
         flex-direction: row;/* Alinha as divs horizontalmente */
@@ -406,7 +406,7 @@ button:hover, .inst:hover, .tik-tok:hover {
         margin: 2% ;
         font-size: clamp(2.4em, 5vw, 10.5em); /* Ajuste dinâmico */
          margin: clamp(0.1em, 1vw, 1.5em) ;
-         width: clamp(5em, 75vw, 100em);
+         width: clamp(8em, 95vw, 100em);
          height: clamp(5em, 20vw, 40em);
      }
      .div3 {
@@ -442,86 +442,5 @@ button:hover, .inst:hover, .tik-tok:hover {
      
  
  }
- @media (min-height: 800px) and(max-height:1000)and (orientation: landscape) {
-    .container {
-        display: flex; 
-        flex-direction: row;/* Alinha as divs horizontalmente */
-        justify-content: space-between; /* Espaçamento uniforme entre as divs */
-        align-items: flex-start; /* Alinha as divs ao topo */
-        width: 100%;
-        
-     }
  
-     .div1 {
-         width: 50%; /* Cada div ocupa metade da largura */
-         height: 85vh; /* Ajusta a altura proporcional ao formato paisagem */
-         padding: 10px;
-         box-sizing: border-box; /* Inclui padding na largura e altura */
-         overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
-     }
-     .div2 {
-         width: 50%; /* Cada div ocupa metade da largura */
-         height: 85vh; /* Ajusta a altura proporcional ao formato paisagem */
-         padding: 10px;
-         box-sizing: border-box; /* Inclui padding na largura e altura */
-         overflow: auto; 
-         
-         /* Evita que o conteúdo ultrapasse os limites */
-     }
-     .div2 .sub-title {
-         margin: 2%;
-         
-         font-size: clamp(1em, 4vw, 7em);
-     font-weight: 200;
-     }
-     .div2 .main-title {
-         margin: auto ;
-         font-size: clamp(2em, 10vw, 20em);
-     font-weight: 200;
-     }
-     .review-text{
-        margin:2%;
-         font-size: clamp(1em, 3vw, 15em);
-         
-     }
-     button, .inst, .tik-tok {
-        margin: 2% ;
-        font-size: clamp(4.4em, 5vw, 10.5em); /* Ajuste dinâmico */
-         margin: clamp(0.1em, 1vw, 1.5em) ;
-         width: clamp(5em, 75vw, 100em);
-         height: clamp(5em, 20vw, 40em);
-     }
-     .div3 {
-         width: 100%; /* O rodapé ocupa toda a largura */
-         height: 5%; /* Adapta a altura dinamicamente ao conteúdo */
-         padding: 10px 5px; /* Espaçamento interno no rodapé */
-         margin-bottom: none;
-         text-align: center; /* Centraliza o conteúdo do rodapé */
-         background-color: #141414; /* Fundo discreto para o rodapé */
-         display: flex;
-         flex-direction: row;
- 
-         
-     }
-     
-         .div3 img {
-             width: clamp(3em, 13vw, 20em);
-             height: auto;
-            margin: auto;
-             display: flex;
-             flex-direction: row;
-     }
-     .div3 p {
-         color: #ffffff;
-         font-size: clamp(0.7em, 2vw, 4.5em);
-         font-family: 'Poppins', Arial, sans-serif;
-         margin: 10px auto;
-     }
-     .stars {
-         gap: 10px;
-        font-size: clamp(1em, 2vw, 5em);
-     }
-     
- 
- }
  
