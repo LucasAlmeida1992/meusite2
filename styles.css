@@ -38,10 +38,10 @@ html, body {
     overflow: hidden;
     padding: 20px 10px;
     z-index: 1;
-    border: 10px solid transparent;
+    border: 3px solid transparent;
     border-image: linear-gradient(to right, #2bc6c2, rgba(43, 198, 194, 0));
-    border-image-slice: 1;
-    border-radius: 20px;
+    border-image-slice: 0.7;
+    border-radius:0px;
 }
 
 .div1 img {
@@ -91,6 +91,7 @@ html, body {
 .div2 .main-title {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(4em, 20vw, 50em);
+    font-style: italic;
     color: #ffffff;
    
     
@@ -108,7 +109,7 @@ button, .inst, .tik-tok {
     width: 80%;
     height: 200px;
     margin: 10px ;
-    background: linear-gradient(to right, #2bc6c2, hsl(189, 41%, 43%)); 
+    background: linear-gradient(to right, #2bc6c2, hsl(189, 42%, 25%)); 
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -147,7 +148,7 @@ button:hover, .inst:hover, .tik-tok:hover {
 /* TEXTO DE AVALIAÇÃO */
 .review-text {
     font-size: clamp(1em, 1.5vw, 2em); /* Ajuste dinâmico */
-    color: #ffffff;
+    color: #b3b3b3;
     margin-top: 20px;
     text-align: center;
 }
@@ -160,7 +161,7 @@ button:hover, .inst:hover, .tik-tok:hover {
 }
 
 .stars i {
-    color: #ffd700;
+    color: #fce87a;
     font-size: clamp(2em, 3vw, 4.5em);
 }
 
@@ -204,7 +205,7 @@ button:hover, .inst:hover, .tik-tok:hover {
 
     .div1, .div2 {
         width: 100%;
-        height: 55vh;
+        height: 50vh;
         overflow: auto;
         padding: 10px;
         flex-direction: column;
@@ -214,7 +215,7 @@ button:hover, .inst:hover, .tik-tok:hover {
     button, .inst, .tik-tok {
         font-size: clamp(0.4em, 6vw, 5.5em); /* Ajuste dinâmico */
         margin: clamp(0.1em, 1vw, 1.5em) ;
-        width: clamp(5em, 70vw, 80em);
+        width: clamp(5em, 94vw, 80em);
        
     }
     .div2 .sub-title {
@@ -223,7 +224,10 @@ button:hover, .inst:hover, .tik-tok:hover {
         
     }
     .div2 .main-title {
-        font-size: clamp(0.7em, 7vw, 2.5em);
+        width: clamp(3.7em, 80vw, 90em);
+        height: auto;
+        margin:none;
+
     }
     .review-text{
         font-size: clamp(0.3em, 4.5vw, 4.2em);
@@ -280,14 +284,14 @@ button:hover, .inst:hover, .tik-tok:hover {
 
     .div1 {
         width: 50%; /* Cada div ocupa metade da largura */
-        height: 80vh; /* Ajusta a altura proporcional ao formato paisagem */
+        height: 85vh; /* Ajusta a altura proporcional ao formato paisagem */
         padding: 10px;
         box-sizing: border-box; /* Inclui padding na largura e altura */
         overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
     }
     .div2 {
         width: 50%; /* Cada div ocupa metade da largura */
-        height: 80vh; /* Ajusta a altura proporcional ao formato paisagem */
+        height: 85vh; /* Ajusta a altura proporcional ao formato paisagem */
         padding: 10px;
         box-sizing: border-box; /* Inclui padding na largura e altura */
         overflow: visible; /* Evita que o conteúdo ultrapasse os limites */
@@ -308,6 +312,9 @@ button:hover, .inst:hover, .tik-tok:hover {
     }
     button, .inst, .tik-tok {
        margin: 2% ;
+       font-size: clamp(0.4em, 3vw, 5.5em); /* Ajuste dinâmico */
+        margin: clamp(0.1em, 1vw, 1.5em) ;
+        width: clamp(5em, 45vw, 80em);
     }
     .div3 {
         width: 100%; /* O rodapé ocupa toda a largura */
