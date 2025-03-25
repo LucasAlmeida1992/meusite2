@@ -196,7 +196,7 @@ button:hover, .inst:hover, .tik-tok:hover {
     margin: 50px auto;
 }
 
-/* MEDIA QUERY PARA 768PX */
+/* MEDIA QUERY PARA 666PX */
 @media (max-width: 666px) {
     .container {
         flex-direction: column;
@@ -280,6 +280,7 @@ button:hover, .inst:hover, .tik-tok:hover {
         justify-content: space-between; /* Espaçamento uniforme entre as divs */
         align-items: flex-start; /* Alinha as divs ao topo */
         width: 100%;
+       
     }
 
     .div1 {
@@ -294,12 +295,14 @@ button:hover, .inst:hover, .tik-tok:hover {
         height: 85vh; /* Ajusta a altura proporcional ao formato paisagem */
         padding: 10px;
         box-sizing: border-box; /* Inclui padding na largura e altura */
-        overflow: visible; /* Evita que o conteúdo ultrapasse os limites */
+        overflow: auto; 
+        
+        /* Evita que o conteúdo ultrapasse os limites */
     }
     .div2 .sub-title {
         margin: 1px;
         font-size: clamp(1em, 2vw, 3em);
-    font-weight: 200px;
+    font-weight: 200;
     }
     .div2 .main-title {
         margin: 1px ;
@@ -344,10 +347,99 @@ button:hover, .inst:hover, .tik-tok:hover {
     }
     .stars {
         gap: 10px;
-       
+       font-size: clamp(1em, 2vw, 5em);
     }
     
 
 }
 
-    
+
+
+
+
+
+/*---------------------------------------------------*/
+    @media (min-width: 768px) and (min-height: 900px)  {
+    .container {
+        display: flex; 
+        flex-direction: column;/* Alinha as divs horizontalmente */
+         /* Garante que as divs fiquem na mesma linha */
+         justify-content: center; /* Espaçamento uniforme entre as divs */
+         align-items: center; /* Alinha as divs ao topo */
+         width: 100%;
+        
+     }
+ 
+     .div1 {
+         width: 100%; /* Cada div ocupa metade da largura */
+         height: 50vh; /* Ajusta a altura proporcional ao formato paisagem */
+         padding: 10px;
+         box-sizing: border-box; /* Inclui padding na largura e altura */
+         overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
+     }
+     .div2 {
+         width: 100%; /* Cada div ocupa metade da largura */
+         height: 50vh; /* Ajusta a altura proporcional ao formato paisagem */
+         padding: 10px;
+         box-sizing: border-box; /* Inclui padding na largura e altura */
+         overflow: auto; 
+         
+         /* Evita que o conteúdo ultrapasse os limites */
+     }
+     .div2 .sub-title {
+         margin: 2%;
+         
+         font-size: clamp(1em, 4vw, 7em);
+     font-weight: 200;
+     }
+     .div2 .main-title {
+         margin: auto ;
+         font-size: clamp(2em, 10vw, 20em);
+     font-weight: 200;
+     }
+     .review-text{
+        margin:2%;
+         font-size: clamp(1em, 3vw, 15em);
+         
+     }
+     button, .inst, .tik-tok {
+        margin: 2% ;
+        font-size: clamp(0.4em, 5vw, 10.5em); /* Ajuste dinâmico */
+         margin: clamp(0.1em, 1vw, 1.5em) ;
+         width: clamp(5em, 75vw, 100em);
+         height: clamp(5em, 20vw, 40em);
+     }
+     .div3 {
+         width: 100%; /* O rodapé ocupa toda a largura */
+         height: 5%; /* Adapta a altura dinamicamente ao conteúdo */
+         padding: 10px 5px; /* Espaçamento interno no rodapé */
+         margin-bottom: none;
+         text-align: center; /* Centraliza o conteúdo do rodapé */
+         background-color: #141414; /* Fundo discreto para o rodapé */
+         display: flex;
+         flex-direction: row;
+ 
+         
+     }
+     
+         .div3 img {
+             width: clamp(1em, 13vw, 20em);
+             height: auto;
+            margin: auto;
+             display: flex;
+             flex-direction: row;
+     }
+     .div3 p {
+         color: #ffffff;
+         font-size: clamp(0.7em, 2vw, 4.5em);
+         font-family: 'Poppins', Arial, sans-serif;
+         margin: 10px auto;
+     }
+     .stars {
+         gap: 10px;
+        font-size: clamp(1em, 2vw, 5em);
+     }
+     
+ 
+ }
+ 
