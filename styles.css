@@ -191,7 +191,7 @@ button:hover, .inst:hover, .tik-tok:hover {
 
 .div3 p {
     color: #ffffff;
-    font-size: clamp(1em, 1.5vw, 2em);
+    font-size: clamp(1em, 1vw, 2em);
     font-family: 'Poppins', Arial, sans-serif;
     margin: 50px auto;
 }
