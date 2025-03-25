@@ -359,7 +359,7 @@ button:hover, .inst:hover, .tik-tok:hover {
 
 
 /*ipad---------------------------------------------------*/
-@media (min-height: 915px) and (orientation: portrait) {
+@media (min-height: 768px) and (orientation: portrait) {
     .container {
         display: flex; 
         flex-direction: row;/* Alinha as divs horizontalmente */
