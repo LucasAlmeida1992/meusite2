@@ -156,7 +156,7 @@ button:hover, .inst:hover, .tik-tok:hover {
     width: 100%;
     min-height: 5vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 15px 10px;
@@ -214,6 +214,10 @@ button:hover, .inst:hover, .tik-tok:hover {
         padding: 10px;
         text-align: center;
         flex-direction: column
+    }
+    .gog, .ssl{
+        display: flex;
+        flex-direction: row;
     }
     .div3 img {
         width: 100px;
