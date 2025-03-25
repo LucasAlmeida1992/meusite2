@@ -1,34 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Página carregada. Interatividade ativa."); // Confirma que o JS foi carregado
+    console.log("Página carregada. Interatividade ativa.");
 
     const btnOrcamento = document.getElementById("btnOrcamento");
-    const maquinaverde = document.querySelector(".maquinaverde");
     const maquina = document.querySelector(".maquina");
 
     if (btnOrcamento) {
         btnOrcamento.addEventListener("click", (e) => {
-            e.preventDefault(); // Evita redirecionamento imediato
-            console.log("Botão Orçamento clicado!"); // Confirma o clique
+            e.preventDefault();
+            console.log("Botão Orçamento clicado!");
 
-            const isDesktop = window.innerWidth >= 768;
-            const distance = isDesktop ? -200 : -50; // Distância ajustada
+            btnOrcamento.classList.add("clicked");
 
-            if (maquinaverde && maquina) {
-                console.log("Animação sendo aplicada.");
-                maquinaverde.style.transform = `translateY(${distance}px)`;
-                maquina.style.transform = `translateY(${distance}px)`;
-            } else {
-                console.error("Elementos '.maquinaverde' ou '.maquina' não encontrados.");
+            setTimeout(() => {
+                btnOrcamento.classList.remove("clicked");
+            }, 500);
+
+            if (maquina) {
+                console.log("Animação na máquina iniciada.");
+                maquina.style.transform = `translateY(-50px)`;
             }
 
             setTimeout(() => {
-                window.location.href = "https://wa.me/message/2KNB5DI35PDBH1"; // Redireciona para o WhatsApp
-            }, 500); // Aguarde 0.5 segundo para o redirecionamento
+                window.location.href = "https://wa.me/message/2KNB5DI35PDBH1";
+            }, 600);
         });
     } else {
         console.error("Botão '#btnOrcamento' não encontrado no DOM.");
     }
 });
+
 
 
 
